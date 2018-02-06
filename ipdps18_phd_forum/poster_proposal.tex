@@ -54,7 +54,8 @@ producers, consumers and queues.
 
 \begin{figure} 
 \includegraphics[width=0.48\textwidth]{figs/prototype.pdf}
-\caption{EnTK prototype}\label{fig:prototype}
+\caption{Execution time and memory consumed by EnTK prototype with multiple 
+producers and consumers and $O(10^6)$ tasks}\label{fig:prototype}
 \end{figure}
 
 In Figure~\ref{fig:prototype}, we show that the execution duration decreases
@@ -82,7 +83,8 @@ run on 1 core for \(\approx\)600 seconds, executes a Gromacs simulation. Each
 task requires an input of 4 files with an aggregate size of 550KB.
 \begin{figure} 
 \includegraphics[width=0.48\textwidth]{figs/weak_scaling_titan_orte_reduced.pdf}
-\caption{Weak scaling}\label{fig:weak_scaling}
+\caption{Weak scalability on Titan: 512, 1,024, 2,048, and 4,096
+1-core tasks executed on the same amount of cores}\label{fig:weak_scaling}
 \end{figure}
 
 In Figure~\ref{fig:weak_scaling}, the Task Execution Time increases even though
@@ -95,7 +97,8 @@ data increases with increase in the number of tasks.
 
 \begin{figure} 
 \includegraphics[width=0.48\textwidth]{figs/strong_scaling_titan_orte.pdf}
-\caption{Strong scaling}\label{fig:strong_scaling}
+\caption{Strong scalability on Titan: 8192 1-core tasks executed on the 1024, 
+2048 and 4096 cores}\label{fig:strong_scaling}
 \end{figure}
 
 In Figure~\ref{fig:strong_scaling}, the Task Execution Time reduces linearly 
@@ -113,7 +116,8 @@ rate and are resubmitted automatically by EnTK.
 
 \begin{figure} 
 \includegraphics[width=0.48\textwidth]{figs/specfem_exec_time_varying_concurrency_titan.pdf}
-\caption{Specfem execution time and failure rate}\label{fig:specfem}
+\caption{Task  Execution  Time  of  forward  simulations  using EnTK at various 
+values of concurrency}\label{fig:specfem}
 \end{figure}
 
 In Figure~\ref{fig:specfem}, we run six applications with 1 pipeline, 1 stage 
@@ -135,7 +139,10 @@ and observe the speedup of the proposed algorithm.
 
 \begin{figure} 
 \includegraphics[width=0.48\textwidth]{figs/EX_PSU_error_plot_2x2.pdf}
-\caption{Error in Analog Ensemble execution}\label{fig:anen}
+\caption{Predictions from random and adaptive methods. (a) theoretical true 
+value, (b) the interpolated map from 1,800 randomly picked locations, (c) the 
+interpolated map from 1,800 locations identified using AUA, (d) box plots of the
+errors for both implementations}\label{fig:anen}
 \end{figure}
 
 Figure~\ref{fig:anen} shows the prediction maps and errors obtained from the two
