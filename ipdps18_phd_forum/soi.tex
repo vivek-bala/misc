@@ -1,35 +1,56 @@
 \subsection{Short bio sketch}
-I am currently a third year PhD candidate in the Electrical and Computer 
-Engineering (ECE) department at Rutgers University and a member of the RADICAL
-group, lead by Dr. Shantenu Jha. Prior to my PhD program, I obtained my Master's
-in ECE working with the RADICAL group at Rutgers University and a Bachelor's in 
-Electronics and Communication Engineering from SSN College of Engineering, Anna
-University, Chennai, India.
+I am a third year PhD candidate in the Electrical and Computer Engineering (ECE)
+department at Rutgers University and a member of the RADICAL group, lead by 
+Dr. Shantenu Jha. Prior to my PhD program, I obtained my Masters in ECE working 
+with the RADICAL group at Rutgers University and a Bachelors in Electronics and 
+Communication Engineering from SSN College of Engineering, Anna University, 
+Chennai, India.
 
 \subsection{Current research interests}
 I was introduced to the concept of abstractions and ensemble-based applications
-(EBAs) in molecular dynamics during my research, towards my Master's, with the 
+(EBAs) in molecular dynamics during my research, towards my Masters, with the 
 RADICAL group. My research consisted of a survey of existing frameworks that 
-provide abstractions for resource management and task execution of EBAs. This
-work culminated in the development of Ensemble Toolkit~\cite{entk} (EnTK v0.1) 
-and ExTASY~\cite{extasy}. My current research in abstractions for execution of 
-EBAs on HPCs lead to the identification of three separate layers of concern: (1) 
-specification of tasks and resource requirements, (2) task-graph traversal and 
-(3) resource selection and acquisition, and task execution management. I am 
-interested in the concepts of component-based software engineering and studying
-their potential in enabling composability and reuse in frameworks in the HPC 
-community~\cite{review_bb_2016}.
+abstract resource and task management complexities from domain scientists
+interested in executing EBAs on HPCs. This work culminated in the development of
+Ensemble Toolkit~\cite{entk} (EnTK v0.1) and ExTASY~\cite{extasy}. My research 
+investigated abstractions not just for execution of EBAs but also composition
+of EBAs. This work lead to the identification of three separate layers of 
+concern: (1) specification of tasks and resource requirements, (2) task-graph 
+traversal and (3) resource selection and acquisition, and task execution 
+management. I am interested in the concepts of component-based software 
+engineering and studying their potential in enabling composability and reuse in 
+similar frameworks in the HPC community~\cite{review_bb_2016}.
 
 \subsection{Plan for future research/career}
+Many life science applications are reaching the scientific limits of predefined
+EBAs and require adapting the application based on intermediate results towards
+relevant ranges of results. I am interested in characterizing the functional 
+requirements of adaptive applications, i.e. applications with modifications to 
+the task-graph during runtime. EnTK can be enhanced with such capabilities
+based on the characterization.
 
+Many applications that operate at full scale of data and parameter space often
+require a large set of resources for concurrent execution of its tasks (and thus
+smaller time to completion (TTC)), such that they cannot be accommodated on a 
+single HPC system. In the IPDPS technical paper, we discussed the seismic 
+inversion application that, at full scale, consists of 4096 simulations each 
+requiring 384 GPUs. This requirement cannot be supported by a single HPC system 
+currently and these simulations are executed sequentially leading to larger TTC. 
+I am interested in investigating the requirements and capabilities of a framework 
+that enables execution of such applications over multiple distributed computing 
+infrastructures (DCI) such as HPC systems, grids and clouds. This opens up 
+interesting questions in the context of scheduling tasks and data placement 
+across different DCIs.
 
+Post my PhD, I am interested in research and development opportunities in 
+parallel and distributed computing, and systems engineering in the industry.
 
 
 \subsection{Objectives for participating in IPDPS Student Program}
 
-\begin{itemize}
-\item How do you expect the interaction with the IPDPS community will further 
-your research/career goals?
-\end{itemize}
+% \begin{itemize}
+% \item How do you expect the interaction with the IPDPS community will further 
+% your research/career goals?
+% \end{itemize}
 
 Comments for reviewers were very helpful.
