@@ -2,6 +2,7 @@
 
 make: 
 	pdflatex ipdps_phdforum.tex
+	bibtex ipdps_phdforum.aux
 	pdflatex ipdps_phdforum.tex
 	pdflatex ipdps_phdforum.tex
 
