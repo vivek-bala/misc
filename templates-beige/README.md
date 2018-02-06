@@ -26,7 +26,7 @@ private repo on GitHub, GitLab, or Bitbucket.
 
 ## Beige Base Template
 
-[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/gitpitch/templates/beige)
+[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://github.com/vivek-bala/misc/tree/master/templates-beige)
 
 The Base template is an excellent starting point for any 
 presentation author. The template markdown found in
