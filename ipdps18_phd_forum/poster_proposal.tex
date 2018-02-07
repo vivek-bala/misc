@@ -9,6 +9,7 @@ New Jersey.
 
 % Brief description of work being done, including problem being addressed and 
 % the research methodology being used
+\subsection{Description of research work}
 
 Many scientific problems solved on HPCs consist of applications that rely on the
 collective output of multiple tasks as opposed to a single large task. The 
@@ -16,20 +17,23 @@ individual tasks within the collection might be uncoupled; if coupled, the tasks
 might have global or local synchronizations, and regular or irregular 
 communication. This is in contrast to traditional parameter sweeps, or 
 high-throughput computing (HTC) applications, where the tasks are typically
-identical, uncoupled, idempotent and can be executed in any order.
+identical, uncoupled, idempotent and can be executed in any order. We call a
+set of such tasks as an ensemble where an application may consist of multiple 
+ensembles.
 
-The execution of an ensemble on HPC machines presents three main challenges: 
-(1) encoding scientific problems into algorithms that are amenable to 
-distributed and coordinated solution; (2) sizing, acquiring, and managing 
-resources for the execution; and (3) managing the execution of the ensemble.
+The execution of an ensemble-based application (EBA) on HPC machines presents 
+three main challenges: (1) encoding scientific problems into algorithms that are 
+amenable to distributed and coordinated solution; (2) sizing, acquiring, and 
+managing resources for the execution; and (3) managing the execution of the 
+ensemble.
 
 In the absence of generic solutions to these challenges, we designed and 
-implemented the Ensemble Toolkit. EnTK adheres to the building blocks 
+implemented the Ensemble Toolkit (EnTK). EnTK adheres to the building blocks 
 approach~\cite{review_bb_2016} and thus supports coupling with existing runtime 
 systems. In addition to extensibility, EnTK enables composability by providing 
-components specifically to create ensemble-based applications. These features 
-enable EnTK to overcome flexibility constraints of monolithic workflow systems,
-and thereby support a wide range of application requirements.
+components specifically to create EBAs. These features enable EnTK to overcome 
+flexibility constraints of monolithic workflow systems, and thereby support a 
+wide range of application requirements.
 
 EnTK is engineered for scale and diversity of computing platforms and runtime 
 systems. EnTK addresses these challenges by decoupling the description of 
@@ -40,11 +44,11 @@ acquisition; and task execution management.
 \subsection{Abstract of results to be presented in poster}
 
 We present three sets of results in the poster. We first present the performance
-benchmark of an EnTK prototype that provide a reference hardware configuration 
+benchmark of an EnTK prototype that provides a reference hardware configuration 
 to support execution of up to $O(10^6)$ tasks. In the second set of results, we
 present the weak and strong scaling behavior of EnTK. Lastly, we implement and 
 execute at scale our two use cases, seismic inversion and adaptive analog 
-workflow.
+algorithm (AUA).
 
 We prototyped EnTK instantiating only multiple producers and consumers of tasks.
 The producers push into RabbitMQ queues and consumers pull from these queues.
@@ -90,7 +94,7 @@ task requires an input of 4 files with an aggregate size of 550KB.
 In Figure~\ref{fig:weak_scaling}, the Task Execution Time increases even though
 there are sufficient resources to run all the tasks. We attribute this to the
 limitations in the current implementation of the RTS and the ORTE distributed 
-virtual machine of OpenMP. EnTK Management Overhead remains constant up to 2048
+virtual machine of OpenMP. EnTK Management Overhead remains constant up to 2048,
 above which the number of tasks strain the resources leading to an increase in
 the overhead. The Data Staging Duration increases since the total amount of 
 data increases with increase in the number of tasks.
@@ -102,7 +106,8 @@ data increases with increase in the number of tasks.
 \end{figure}
 
 In Figure~\ref{fig:strong_scaling}, the Task Execution Time reduces linearly 
-with an increase in the number of available cores. EnTK Management Overhead 
+with an increase in the number of available cores due to a decrease in the 
+number of tasks that are executed sequentially. EnTK Management Overhead 
 remains constant at \(\approx\)8 seconds and Data Staging Duration remains 
 constant at \(\approx\)90 seconds since the total number of tasks remains
 constant and thus the total data staged is also constant.
@@ -125,11 +130,17 @@ per pipeline and 1, 2, 4, 8, 16 and 32 tasks per stage. Each of the applications
 is run at different levels of concurrency. We observe that for constant
 concurrency, the execution time increases linearly with increase in the number 
 of tasks and the execution time reduces linearly when increasing the 
-concurrency. We also observe that reducing concurrency eliminates failures: we 
-encountered no failures in executions with up to $O(2^4)$ concurrent tasks and 
-6,144 nodes. At $O(2^5)$ concurrent tasks and 12,288 nodes, 157 tasks failed. 
+concurrency. The increase in the execution time can be explained in terms of the
+number of sequential set of tasks executed which increases in the former and
+decreases in the latter. We also observe that reducing concurrency eliminates 
+failures: we encountered no failures in executions with up to $2^4$ concurrent 
+tasks and 6,144 nodes. At $2^5$ concurrent tasks and 12,288 nodes, 157 tasks 
+failed. We attribute this to the HPC system's limitations to reliably support 
+concurrent execution of simulations which not only use 90\% of the systems 
+compute nodes but also write $2^{20}$ bytes of data per simulation to disk. 
 EnTK automatically submits a failed tasks and as a result we observed a Task 
-Execution Time of \(\approx\)360 seconds.
+Execution Time of \(\approx\)360 seconds, a duration similar to the concurrent
+execution of $2^4$ tasks.
 
 
 We use EnTK to implement the AUA algorithm to iteratively and dynamically 
@@ -146,7 +157,7 @@ errors for both implementations}\label{fig:anen}
 \end{figure}
 
 Figure~\ref{fig:anen} shows the prediction maps and errors obtained from the two
-implementations. The AUA algorithm generates a map (b, c) with certain 
+implementations. The AUA algorithm generates a map (c) with certain 
 areas that have a better representation of the analysis than the map generated 
-by a random selection of pixels. Box plot (d) shows that the error converges 
+by a random selection of pixels (b). Box plot (d) shows that the error converges 
 faster in the AUA algorithm than in the random selection.

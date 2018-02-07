@@ -1,56 +1,76 @@
 \subsection{Short bio sketch}
 I am a third year PhD candidate in the Electrical and Computer Engineering (ECE)
 department at Rutgers University and a member of the RADICAL group, lead by 
-Dr. Shantenu Jha. Prior to my PhD program, I obtained my Masters in ECE working 
-with the RADICAL group at Rutgers University and a Bachelors in Electronics and 
-Communication Engineering from SSN College of Engineering, Anna University, 
-Chennai, India.
+Dr. Shantenu Jha. Prior to my PhD program, I obtained my master`s degree in ECE 
+working with the RADICAL group at Rutgers University and a bachelor`s degree in 
+Electronics and Communication Engineering from SSN College of Engineering, Anna 
+University, Chennai, India.
 
 \subsection{Current research interests}
-I was introduced to the concept of abstractions and ensemble-based applications
-(EBAs) in molecular dynamics during my research, towards my Masters, with the 
-RADICAL group. My research consisted of a survey of existing frameworks that 
-abstract resource and task management complexities from domain scientists
-interested in executing EBAs on HPCs. This work culminated in the development of
-Ensemble Toolkit~\cite{entk} (EnTK v0.1) and ExTASY~\cite{extasy}. My research 
-investigated abstractions not just for execution of EBAs but also composition
-of EBAs. This work lead to the identification of three separate layers of 
-concern: (1) specification of tasks and resource requirements, (2) task-graph 
-traversal and (3) resource selection and acquisition, and task execution 
-management. I am interested in the concepts of component-based software 
-engineering and studying their potential in enabling composability and reuse in 
-similar frameworks in the HPC community~\cite{review_bb_2016}.
+I was introduced to the concepts of abstractions and ensemble-based applications
+(EBAs) in molecular dynamics during my research towards my Masters. My research 
+consisted of a survey of existing frameworks that abstract resource and task 
+management complexities from domain scientists interested in executing EBAs on 
+HPCs. This work culminated in the development of Ensemble Toolkit~\cite{entk} 
+(EnTK v0.1) and ExTASY~\cite{extasy}. In my PhD, I was introduced to 
+applications from other science domains, such as seismology and climate science.
+My research extended to investigation of abstractions not just for execution of 
+EBAs on HPCs but also for composition of EBAs. This work lead to the 
+identification of three separate layers of concern: (1) specification of tasks 
+and resource requirements, (2) resource selection and acquisition, and (3) and 
+task execution management. I am interested in the concepts of component-based 
+software engineering and studying their potential in enabling composability and 
+reuse in similar frameworks in the HPC community~\cite{review_bb_2016}.
 
 \subsection{Plan for future research/career}
 Many life science applications are reaching the scientific limits of predefined
 EBAs and require adapting the application based on intermediate results towards
-relevant ranges of results. I am interested in characterizing the functional 
-requirements of adaptive applications, i.e. applications with modifications to 
-the task-graph during runtime. EnTK can be enhanced with such capabilities
-based on the characterization.
+interesting regions of the set of possible results. I am interested in 
+characterizing the functional requirements of adaptive applications, i.e. 
+applications with modifications to the task-graph during runtime and 
+incorporating these capabilities in EnTK.
 
 Many applications that operate at full scale of data and parameter space often
 require a large set of resources for concurrent execution of its tasks (and thus
-smaller time to completion (TTC)), such that they cannot be accommodated on a 
+smaller time to execution (TTE)), such that they cannot be accommodated on a 
 single HPC system. In the IPDPS technical paper, we discussed the seismic 
 inversion application that, at full scale, consists of 4096 simulations each 
-requiring 384 GPUs. This requirement cannot be supported by a single HPC system 
-currently and these simulations are executed sequentially leading to larger TTC. 
-I am interested in investigating the requirements and capabilities of a framework 
-that enables execution of such applications over multiple distributed computing 
-infrastructures (DCI) such as HPC systems, grids and clouds. This opens up 
-interesting questions in the context of scheduling tasks and data placement 
+requiring 384 GPUs. This simulations cannot be concurrently execution on a 
+single HPC system currently and, consequently, are executed sequentially leading
+to larger TTE. I am interested in investigating requirements and capabilities of 
+frameworks that enables execution of such applications over multiple distributed 
+computing infrastructures (DCI) such as HPC systems, grids and clouds. Although
+this will increase the number of resources as seen by the application, it opens 
+up interesting questions in the context of scheduling tasks and data placement 
 across different DCIs.
 
 Post my PhD, I am interested in research and development opportunities in 
-parallel and distributed computing, and systems engineering in the industry.
+the field of parallel and distributed computing, and systems engineering in the 
+industry.
 
 
 \subsection{Objectives for participating in IPDPS Student Program}
+
+Participation in the IPDPS PhD forum will provide me a platform to share my 
+current research work and future research ideas to students and experts in
+the parallel and distributed computing field. I believe I will get valuable 
+feedback that will be helpful to refine my research ideas. I believe sharing my 
+research at such a venue will enable outreach to students and communities that 
+may benefit from my research work.
+
+The forum will provide me with an opportunity to engage with students working
+on other interesting topics in the field. I also foresee opportunities to be 
+introduced to other open source projects that overlap with my interests and
+I may also be able to contribute.
+
+I believe I will gain a lot of valuable knowledge and experience by being part
+of the PhD forum. I am especially looking forward to talks from academic and 
+industry experts on the latest research that are yet to be seen by the public. 
+I will greatly benefit from the mentoring sessions and career planning directly 
+with the industry experts and will be able to build valuable contacts in both 
+industry and academia.
 
 % \begin{itemize}
 % \item How do you expect the interaction with the IPDPS community will further 
 % your research/career goals?
 % \end{itemize}
-
-Comments for reviewers were very helpful.
