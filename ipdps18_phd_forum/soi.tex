@@ -1,10 +1,10 @@
 \subsection{Short bio sketch}
-I am a third year PhD candidate in the Electrical and Computer Engineering (ECE)
+I am a fourth year PhD candidate in the Electrical and Computer Engineering (ECE)
 department at Rutgers University and a member of the RADICAL group, lead by 
 Dr. Shantenu Jha. Prior to my PhD program, I obtained my master`s degree in ECE 
-working with the RADICAL group at Rutgers University and a bachelor`s degree in 
-Electronics and Communication Engineering from SSN College of Engineering, Anna 
-University, Chennai, India.
+working with the RADICAL group and a bachelor`s degree in Electronics and 
+Communication Engineering from SSN College of Engineering, Anna University, 
+Chennai, India.
 
 % \subsection{Current research interests}
 % \jhanote{What are the motivating problems that frame your research?}
@@ -40,7 +40,7 @@ composition of EBAs on HPCs, identifying three main concerns: (1)
 specification of tasks and resource requirements; (2) resource selection and
 acquisition; and (3) task execution management. I am also interested in the
 concepts of component-based software engineering, studying how they can be
-further elaborated to enable composability and reuse of software frameworks
+used to enable composability and reuse of software frameworks
 for the HPC community~\cite{review_bb_2016}.
 
 \subsection{Plan for future research/career}
@@ -52,57 +52,63 @@ for the HPC community~\cite{review_bb_2016}.
 % applications with modifications to the task-graph during runtime and 
 % incorporating these capabilities in EnTK.
 
-Several applications in the molecular dynamics field benefit from steering their
-sampling towards interesting molecular structures. These applications, called
-adaptive applications, require the capability to modify the application task 
-graph based on intermediate results. I am studying the 
-requirements and overheads of composing and executing adaptive applications.
+Several applications in the field of molecular dynamics benefit from steering
+their sampling towards interesting molecular structures. These applications
+are called adaptive because they require the capability to modify their task
+graph at runtime, based on intermediate results. I am studying the requirements 
+and overheads of composing and executing adaptive applications, investigating 
+the similarities and differences among types of adaptivity. Ultimately, my 
+research will contribute to derive a unified model of adaptive ensemble-based 
+applications.
 
-Many science applications often require a large set of resources for concurrent 
-execution of its tasks (and thus smaller time to execution (TTE)). Operating at 
-full scale of data and parameter space, the resource requirements of such 
-applications cannot be accommodated on a single HPC system. In the IPDPS paper, 
-we discussed the seismic inversion application that, at full scale and 
-concurrency, requires ~96x capacity of ORNL Titan.
-\jhanote{you've introduced scale as a the dominant challenge.. then you
-go to talking about smaller machines that have a different set of challenges.} 
-\vbnote{I am proposing using multiple machines concurrently when one single
-machine is not sufficient}
-I am studying the requirements and capabilities of frameworks that enable 
-execution of such applications over multiple distributed computing 
-infrastructures (DCI) such as HPC systems, grids and clouds. Such capabilities
-need to be incorporated with abstractions to isolate the user from the 
-complexity of using different DCIs. This effort will also open interesting 
-questions in the context of task scheduling and data placement across different
-DCIs.
+Many scientific applications require increasing the concurrency of task
+execution to reduce time to completion. The resource requirements of such
+applications cannot be accommodated on a single HPC system. For example, in
+the paper accepted at IPDPS 2018, we discuss the seismic inversion use case
+that, at full concurrency, would require ~96x capacity of ORNL Titan.
+
+\jhanote{you've introduced scale as a the dominant challenge. then you
+go to talking about smaller machines that have a different set of
+challenges.} \vbnote{I am proposing using multiple machines concurrently when
+one single machine is not sufficient} A solution to this problem is to enable 
+the execution of such applications across multiple distributed computing 
+infrastructures (DCI) such as HPC systems, grids and clouds. I am studying 
+existing frameworks and capabilities to support execution across DCIs. EnTK 
+will be incorporated with the capability to derive execution strategies based 
+on the analysis of the workload and resources. This effort will target optimal 
+task scheduling and data placement across different DCIs.
+% Such capabilities require dedicated abstractions 
+% to isolate the user from the complexity of using different DCIs. 
+
 
 \jhanote{post my phd is not grammatically correct}
 \vbnote{fixed, thanks}
-After my PhD, I am interested in research and development opportunities in 
-the field of parallel and distributed computing, and systems engineering in the 
-industry.
-
+After my PhD, I am interested in research and development opportunities in
+the field of parallel and distributed computing, and systems engineering in
+the industry.
 
 \subsection{Objectives for participating in IPDPS Student Program}
 
-Participation in the IPDPS PhD forum will provide me with a platform to share my 
-current research work and future research ideas to students and experts in
-the parallel and distributed computing field. I believe I will get valuable 
-feedback that will be helpful to refine my research ideas. I believe sharing my 
-research at such a venue will enable outreach to students and communities that 
-may benefit from my research work.
+Participation in the IPDPS PhD forum will provide me with a platform to share
+my current research work and future research ideas with students and experts
+in the parallel and distributed computing field. This will provide valuable
+feedback that will be helpful to refine my research ideas, towards the
+completion of my thesis. Further, sharing my research at such a venue will
+enable outreach to students and communities that may benefit from the
+theoretical results of my research and the software tools I have developed.
 
-The forum will provide me with an opportunity to engage with students working
-on other interesting topics in the field. I also foresee opportunities to be 
-introduced to other open source projects that overlap with my interests and
-I may also be able to contribute.
+The forum will also provide me with an opportunity to engage with students
+working on other interesting topics in the field. In this context, I foresee
+opportunities to be introduced to other open source projects that overlap
+with my interests and to which I may also be able to contribute.
 
-I believe I will gain a lot of valuable knowledge and experience by being part
-of the PhD forum. I am especially looking forward to talks from academic and 
-industry experts on the latest research that are yet to be seen by the public. 
-I will greatly benefit from the mentoring sessions and career planning directly 
-with the industry experts and will be able to build valuable contacts in both 
-industry and academia.
+I believe I will gain a lot of valuable knowledge and experience by being
+part of the PhD forum. I am especially looking forward to talks from academic
+and industry experts on the latest research that are yet to be seen by the
+public. I will greatly benefit from the mentoring sessions and career
+planning provided by industry experts and will be able to build valuable
+networking in both industry and academia.
+
 
 % \begin{itemize}
 % \item How do you expect the interaction with the IPDPS community will further 
