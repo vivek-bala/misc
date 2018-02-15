@@ -44,7 +44,7 @@ further elaborated to enable composability and reuse of software frameworks
 for the HPC community~\cite{review_bb_2016}.
 
 \subsection{Plan for future research/career}
-\jhanote{this sentence does not make sense ..}
+\jhanote{this sentence does not make sense ..}\vbnote{fixed}
 % Many life science applications are reaching the scientific limits of predefined
 % EBAs and require adapting the application based on intermediate results towards
 % interesting regions of the set of possible results. I am interested in 
@@ -64,8 +64,10 @@ full scale of data and parameter space, the resource requirements of such
 applications cannot be accommodated on a single HPC system. In the IPDPS paper, 
 we discussed the seismic inversion application that, at full scale and 
 concurrency, requires ~96x capacity of ORNL Titan.
-% \jhanote{you've introduced scale as a the dominant challenge.. then you
-% go to talking about smaller machines that have a different set of challenges.} 
+\jhanote{you've introduced scale as a the dominant challenge.. then you
+go to talking about smaller machines that have a different set of challenges.} 
+\vbnote{I am proposing using multiple machines concurrently when one single
+machine is not sufficient}
 I am studying the requirements and capabilities of frameworks that enable 
 execution of such applications over multiple distributed computing 
 infrastructures (DCI) such as HPC systems, grids and clouds. Such capabilities
