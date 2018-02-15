@@ -6,52 +6,84 @@ working with the RADICAL group at Rutgers University and a bachelor`s degree in
 Electronics and Communication Engineering from SSN College of Engineering, Anna 
 University, Chennai, India.
 
-\subsection{Current research interests}
-I was introduced to the concepts of abstractions and ensemble-based applications
-(EBAs) in molecular dynamics during my research towards my Masters. My research 
-consisted of a survey of existing frameworks that abstract resource and task 
-management complexities from domain scientists interested in executing EBAs on 
-HPCs. This work culminated in the development of Ensemble Toolkit~\cite{entk} 
-(EnTK v0.1) and ExTASY~\cite{extasy}. In my PhD, I was introduced to 
-applications from other science domains, such as seismology and climate science.
-My research extended to investigation of abstractions not just for execution of 
-EBAs on HPCs but also for composition of EBAs. This work lead to the 
-identification of three separate layers of concern: (1) specification of tasks 
-and resource requirements, (2) resource selection and acquisition, and (3) and 
-task execution management. I am interested in the concepts of component-based 
-software engineering and studying their potential in enabling composability and 
-reuse in similar frameworks in the HPC community~\cite{review_bb_2016}.
+% \subsection{Current research interests}
+% \jhanote{What are the motivating problems that frame your research?}
+% I was introduced to the concepts of abstractions for resource management 
+% \jhanote{what kind of abstractions?} and ensemble-based applications (EBAs) during
+% my research towards my Masters. My research consisted of a survey of existing
+% frameworks that abstract resource and task management complexities from domain
+% scientists interested in executing EBAs on HPCs. This work culminated in the
+% development of Ensemble Toolkit~\cite{entk} (EnTK v0.1) and
+% ExTASY~\cite{extasy}. In my PhD, I was introduced to applications from other
+% science domains, such as seismology and climate science. My research extended
+% to investigation of abstractions not just for execution of EBAs on HPCs but
+% also for composition of EBAs. This work lead to the identification of three
+% separate layers of concern: (1) specification of tasks and resource
+% requirements, (2) resource selection and acquisition, and (3) and task
+% execution management. I am interested in the concepts of component-based
+% software engineering and studying their potential in enabling composability
+% and reuse in similar frameworks in the HPC community~\cite{review_bb_2016}.
+
+\subsection{Current research interests} I started to research abstractions
+and ensemble-based applications (EBAs) in molecular dynamics during my
+master's studies. In my research, I reviewed the existing frameworks that
+support execution of EBAs, focusing on how domain scientists can be isolated
+from resource and task management complexities. My research contributed to
+the development of the Ensemble Toolkit~\cite{entk} and ExTASY~\cite{extasy},
+two software systems supporting the execution of EBAs on high performance
+computing (HPC) systems.
+
+In my PhD, I extended my research to support the execution of workflows from
+diverse scientific domains, including molecular dynamics, seismology and
+climate science. I developed abstractions to support both execution and
+composition of EBAs on HPCs, identifying three main concerns: (1)
+specification of tasks and resource requirements; (2) resource selection and
+acquisition; and (3) task execution management. I am also interested in the
+concepts of component-based software engineering, studying how they can be
+further elaborated to enable composability and reuse of software frameworks
+for the HPC community~\cite{review_bb_2016}.
 
 \subsection{Plan for future research/career}
-Many life science applications are reaching the scientific limits of predefined
-EBAs and require adapting the application based on intermediate results towards
-interesting regions of the set of possible results. I am interested in 
-characterizing the functional requirements of adaptive applications, i.e. 
-applications with modifications to the task-graph during runtime and 
-incorporating these capabilities in EnTK.
+\jhanote{this sentence does not make sense ..}
+% Many life science applications are reaching the scientific limits of predefined
+% EBAs and require adapting the application based on intermediate results towards
+% interesting regions of the set of possible results. I am interested in 
+% characterizing the functional requirements of adaptive applications, i.e. 
+% applications with modifications to the task-graph during runtime and 
+% incorporating these capabilities in EnTK.
 
-Many applications that operate at full scale of data and parameter space often
-require a large set of resources for concurrent execution of its tasks (and thus
-smaller time to execution (TTE)), such that they cannot be accommodated on a 
-single HPC system. In the IPDPS technical paper, we discussed the seismic 
-inversion application that, at full scale, consists of 4096 simulations each 
-requiring 384 GPUs. This simulations cannot be concurrently execution on a 
-single HPC system currently and, consequently, are executed sequentially leading
-to larger TTE. I am interested in investigating requirements and capabilities of 
-frameworks that enables execution of such applications over multiple distributed 
-computing infrastructures (DCI) such as HPC systems, grids and clouds. Although
-this will increase the number of resources as seen by the application, it opens 
-up interesting questions in the context of scheduling tasks and data placement 
-across different DCIs.
+Several applications in the molecular dynamics field benefit from steering their
+sampling towards interesting molecular structures. These applications, called
+adaptive applications, require the capability to modify the application task 
+graph based on intermediate results. I am studying the 
+requirements and overheads of composing and executing adaptive applications.
 
-Post my PhD, I am interested in research and development opportunities in 
+Many science applications often require a large set of resources for concurrent 
+execution of its tasks (and thus smaller time to execution (TTE)). Operating at 
+full scale of data and parameter space, the resource requirements of such 
+applications cannot be accommodated on a single HPC system. In the IPDPS paper, 
+we discussed the seismic inversion application that, at full scale and 
+concurrency, requires ~96x capacity of ORNL Titan.
+% \jhanote{you've introduced scale as a the dominant challenge.. then you
+% go to talking about smaller machines that have a different set of challenges.} 
+I am studying the requirements and capabilities of frameworks that enable 
+execution of such applications over multiple distributed computing 
+infrastructures (DCI) such as HPC systems, grids and clouds. Such capabilities
+need to be incorporated with abstractions to isolate the user from the 
+complexity of using different DCIs. This effort will also open interesting 
+questions in the context of task scheduling and data placement across different
+DCIs.
+
+\jhanote{post my phd is not grammatically correct}
+\vbnote{fixed, thanks}
+After my PhD, I am interested in research and development opportunities in 
 the field of parallel and distributed computing, and systems engineering in the 
 industry.
 
 
 \subsection{Objectives for participating in IPDPS Student Program}
 
-Participation in the IPDPS PhD forum will provide me a platform to share my 
+Participation in the IPDPS PhD forum will provide me with a platform to share my 
 current research work and future research ideas to students and experts in
 the parallel and distributed computing field. I believe I will get valuable 
 feedback that will be helpful to refine my research ideas. I believe sharing my 
