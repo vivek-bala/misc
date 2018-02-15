@@ -15,8 +15,8 @@ collective output of multiple tasks as opposed to a single large task. The
 individual tasks within a collection might have different levels of coupling
 and communication. This is in contrast to traditional parameter sweeps, or 
 high-throughput computing (HTC) applications, where the tasks are typically
-identical, uncoupled, idempotent and can be executed in any order. We call a
-set of such tasks as an ensemble where an application may consist of multiple 
+identical, uncoupled, idempotent and can be executed in any order. We call such
+a set of tasks as an ensemble where an application may consist of multiple 
 ensembles.
 
 The execution of an ensemble-based application (EBA) on HPC machines presents 
@@ -48,8 +48,8 @@ We present three sets of results in the poster. We first present the performance
 benchmark of an EnTK prototype that provides a reference hardware configuration 
 to support execution of up to $O(10^6)$ tasks. In the second set of results, we
 present the weak and strong scaling behavior of EnTK. Lastly, we implement and 
-execute at scale our two use cases, seismic inversion and adaptive analog 
-algorithm (AUA).
+execute at scale our two use cases, seismic inversion and adaptive unstructured 
+analog (AUA) algorithm.
 
 We prototyped EnTK instantiating multiple producers and consumers of tasks.
 The producers push into RabbitMQ queues and consumers pull from these queues.
@@ -113,10 +113,10 @@ constant and thus the total data staged is also constant.
 
 We use EnTK to encode the forward simulations of the seismic inversion workflow.
 We show EnTK's capability to handle a failure rate of \(\approx\)79\% observed
-when executing $2^5$ simulations concurrently utilizing 75\% of ORNL Titan. We
-also implemented the Adaptive Unstructured Analog algorithm at scale using EnTK 
+when executing $2^5$ simulations concurrently utilizing 75\% of the capacity 
+of ORNL Titan. We also implemented the AUA algorithm at scale using EnTK 
 to predict weather forecasts. We observed predictions to converge faster in the 
-AUA algorithm than in the random selection.
+AUA algorithm than using the status quo method, i.e. random selection.
 
 % We use EnTK to implement the AUA algorithm to iteratively and dynamically 
 % identify locations of the analogs. We will also present our results of this
